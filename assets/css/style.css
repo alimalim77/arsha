@@ -8,13 +8,28 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
 
+
+.Center {
+  width:200px;
+  height:200px;
+  position: fixed;
+  background-color: blue;
+  top: 50%;
+  left: 50%;
+  margin-top: 50px;
+  margin-left: -300px;
+}
+
 a {
-  color: #47b2e4;
+  color: #021924;
   text-decoration: none;
 }
 
@@ -115,6 +130,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   padding: 15px 0;
 }
+
+
 
 #header.header-scrolled, #header.header-inner-pages {
   background: rgba(40, 58, 90, 0.9);
@@ -386,6 +403,80 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+#car .container{
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+#car .container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+#car .container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#car .container .btn:hover {
+  background-color: black;
+}
+
+.btna {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btna span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btna:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btna:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+
 #hero h2 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 50px;
@@ -447,6 +538,8 @@ h1, h2, h3, h4, h5, h6 {
   }
   #hero .hero-img {
     text-align: center;
+    display: block;
+    float: right;
   }
   #hero .hero-img img {
     width: 50%;
@@ -508,6 +601,11 @@ section {
   background-color: #f3f5fa;
 }
 
+.service-bg{
+  background-color: gold;
+  ;
+}
+
 .section-title {
   text-align: center;
   padding-bottom: 30px;
@@ -562,7 +660,7 @@ section {
   transition: all 0.4s ease-in-out;
   display: inline-block;
   padding: 15px 0;
-  filter: grayscale(100);
+  
 }
 
 .cliens img:hover {
@@ -579,9 +677,12 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
+
 }
 
 .about .content ul {
@@ -825,15 +926,20 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
+
 .services .icon-box {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
   background: #fff;
+  margin-right: 25px;
+  margin-top: 10px;
 }
 
 .services .icon-box .icon {
   margin-bottom: 10px;
+  margin-right: 25px;
 }
 
 .services .icon-box .icon i {
